@@ -1,0 +1,4 @@
+Package: roombacmd
+Priority: optional
+Section: misc
+Description: Tool to control a Roomba, usually via serial port

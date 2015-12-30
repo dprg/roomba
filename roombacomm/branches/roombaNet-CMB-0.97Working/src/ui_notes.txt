@@ -1,0 +1,37 @@
+Power:
+power-on
+power-off
+
+Modes:
+reset
+wakeup
+passive
+ clean
+ max
+ spot
+ dock
+safe
+full
+
+Sound:
+beep-lo
+beep-high
+OSU
+
+Test programs:
+tribble
+blink-leds
+test(squar box)
+
+Sensors:
+sensors
+charge data
+
+Vacuum:
+1 vacuum-on vacuum-off
+
+LEDs
+top line (None-green-red-orange)
+only visible for 400(SCI)
+Bottom line (Dock and Checkrobot)
+Only visible for (500 OI)

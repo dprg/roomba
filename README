@@ -1,0 +1,13 @@
+This is code for the book "Hacking Roomba" by Tod E. Kurt
+ on Wiley's ExtremeTech imprint, ISBN 0470072717.
+Copyright 2006, Tod E. Kurt, tod@todbot.com
+
+All code is Open Source via GPL.
+
+Contents
+--------
+- roombacomm  -- Java RoombaComm API library
+- roombacmd   -- roombalib C API, and various simple non-Java roomba programs
+- RoombaMidi2 -- Mac OS X app to turn Roomba into a MIDI instrument
+
+

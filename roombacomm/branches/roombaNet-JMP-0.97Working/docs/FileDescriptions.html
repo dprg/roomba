@@ -1,0 +1,512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body>
+Below are a description of each of the files of this project.<br>
+<h2>/</h2>
+<ul>
+  <li>COPYRIGHT</li>
+  <ul>
+    <li>GNU copyright notice for
+the project</li>
+  </ul>
+  <li>index.html</li>
+  <ul>
+    <li>Redirects to
+docs/index.html</li>
+  </ul>
+  <li>README.txt</li>
+  <ul>
+    <li>text file which tells the
+user to open index.html in a browser</li>
+  </ul>
+  <li>build.xml</li>
+  <ul>
+    <li>ant build file for the project</li>
+  </ul>
+</ul>
+<h2>/src/com/hackingroomba/roombacomm</h2>
+<ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/FrameProcessor.java">FrameProcessor.java</a></li>
+  <ul>
+    <li>An class to handle visual
+processing from a camera mounted on
+the roomba.</li>
+    <li>Used by:
+com.hackingroomba.roombacomm.Bsquare<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/JImagePanel.java">JImagePanel.java</a></li>
+  <ul>
+    <li>It looks like nothing
+references this in the project. Maybe it
+was an early version/contriubutor to FrameProcessor.java ? <br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Note.java">Note.java</a></li>
+  <ul>
+    <li>Simple wrapper for musical
+notes</li>
+    <li>Used by:&nbsp;
+com.hackingroomba.roombacomm.</li>
+    <ul>
+      <li>&nbsp;RoombaComm</li>
+      <li>RTTTLPlay</li>
+      <li>RoombaCommFrame</li>
+      <li>RoombaCommPanel</li>
+      <li>RoombaCommSerial<br>
+      </li>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RTTTLParser.java">RTTTLParser.java</a></li>
+  <ul>
+    <li>A simple class to allow a
+"rttlstring" into an ArrayList of
+notes. The array can later be passed to a connected Roomba to make it
+sing a song. How to use this is deminstrated in
+com.hackingroomba.roombacomm.RoombaCommFrame.playSong(RoombaComm
+roombacomm, String rtttl)<br>
+    </li>
+    <li>Used by:
+com.hackingroomba.roombacomm.</li>
+    <ul>
+      <li>RTTTLPlay</li>
+      <li>RoombaCommFrame</li>
+      <li>RoombaCommPanel</li>
+      <li>RoombaCommSerial</li>
+    </ul>
+    <li>A few sample rttlstrings
+you could use are included here ( you
+can find more via google. :) )</li>
+    <ul>
+      <li>(close encounters of the
+third kind)<br>
+closeencounter:d=16,o=5,b=125:d,p,e,p,c,p.,c4,p,g4,1p.,d6,p,e6,p,c6,p.,c,p,g,1p.,</li>
+      <li>Thunderstruck, ACDC)<br>
+thunderstr:d=16,o=5,b=160:c6,c,a#,c,a,c,a#,c,a,c,g,c,a,c,f,c,g,c,e,c,f,c,e,c,f,c,e,c,f,c,e,c</li>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaComm.java">RoombaComm.java</a></li>
+  <ul>
+    <li>This is the primary
+implementation for this project. It is an
+abstract class that acts as an abstraction layer from the iRobot API's
+for the models of Roomba's that this project is attempting to support.
+The class is designed to simplify users use of the iRobot API and to
+provide as consistent as possible abstraction layer between versions of
+the iRobot API versions. This interface is currently implemented based
+on how the Roombacomm will connect to the Roomba device. There are two
+main implementations of this interface:&nbsp; <a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommSerial.java">RoombaCommSerial.java</a>
+and <a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommTCPClient.java">RoombaCommTCPClient.java</a>
+.<br>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <ul>
+      </ul>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommFrame.java">RoombaCommFrame.java</a></li>
+  <ul>
+    <li>This is a Java Swing User
+Interface(UI). It is intended to
+allow a user to manually control their roomba from their PC. GUI size
+options may be available to support desktop and/or Netbook screen
+resolutions in the future.<br>
+    </li>
+    <ul>
+      <ul>
+      </ul>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommGUI.java">RoombaCommGUI.java</a></li>
+  <ul>
+    <li>This is a class designed
+to start a graphical interface (mainly
+RoombaCommFrame.java, but others may be possible in the future) that
+can be used to manually control the features of the RoombaComm library.
+The main function of this class is to handle command line interfaces
+(CLI) inputs and to provide an example of how other applications could
+reuse RoombaCommFrame.java for their own use.<br>
+    </li>
+    <ul>
+      <ul>
+      </ul>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommSerial.java">RoombaCommSerial.java</a></li>
+  <ul>
+    <li>The serial-port based
+implementation of RoombaComm. Designed
+for physical RS-232 ports, USB adapter ports like Keyspan USA-19HS, and
+Bluetooth serial port profiles.<br>
+    </li>
+    <ul>
+      <ul>
+      </ul>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommTCPClient.java">RoombaCommTCPClient.java</a></li>
+  <ul>
+    <li>This class is an extension
+of the RoombaComm interface. This
+implementation is designed to communicate with the Roomba device across
+a TCP/IP network.<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/images/">images/</a></li>
+  <ul>
+    <li>This is a directory of
+image files used in the the GUI's.<br>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+    </ul>
+  </ul>
+</ul>
+<br>
+Classes designed for specific test(s)<br>
+<ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Bsquare.java">Bsquare.java</a></li>
+  <ul>
+    <li>Drive the Roomba forward,
+back, or CW or CCW square<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/BumpTurn.java">BumpTurn.java</a></li>
+  <ul>
+    <li>Read sensors to detect
+bumps and turn away from them while
+driving<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Drive.java">Drive.java</a></li>
+  <ul>
+    <li>command line controls to
+move a Roomba (RoombaCommSerial only)</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/DriveRealTime.java">DriveRealTime.java</a></li>
+  <ul>
+    <li>GUI to allow user to use
+arrow keys to drive a Roomba in real
+time (RoombaCommSerial only)</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/ListSerialPorts.java">ListSerialPorts.java</a></li>
+  <ul>
+    <li>A simple command line
+program to enumerate the Serial ports
+that the application sees in the environment.<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/LogoA.java">LogoA.java</a></li>
+  <ul>
+    <li>Make a square with a
+Roomba.<br>
+Leaves Roomba in same place it began (theoretically)<br>
+    </li>
+  </ul>
+</ul>
+<br>
+Older classes (Legacy?/Depreciated?) that may not be maintained by this
+project going forward:<br>
+<ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommPanel.java">RoombaCommPanel.java</a></li>
+  <ul>
+    <li>This
+is an older graphical interface that can be used to manually control
+some of the features of the project. This UI is the orginal work of Tod
+E. Kurt, and is not being maintained so that any external to the
+project references can be perserved. (However, the location of the
+class has been changed to match the project ongoing source tree
+structure.)</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommTest.java">RoombaCommTest.java</a></li>
+  <ul>
+    <li>A small GUI to test out
+RoombaComm.</li>
+    <ul>
+      <li>This class is simlar in
+concept to the RoombaCommGUI class.
+However it uses the RoombaCommPanel for the UI that it starts for the
+user.</li>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaCommTestOld.java">RoombaCommTestOld.java</a></li>
+  <ul>
+    <li>A small GUI to test out
+RoombaComm. (an Even earlier version of
+RoombacommTest.java)<br>
+    </li>
+    <ul>
+      <li>This class is simlar in
+concept to the RoombaCommGUI class.
+However it uses the RoombaCommPanel for the UI that it starts for the
+user.</li>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RTTTLPlay.java">RTTTLPlay.java</a></li>
+  <ul>
+    <li>Play RTTL formatted
+ringtones on the Roomba.<br>
+This class only supports a serial connection to a Roomba to play a RTTL
+string from a command line parameter.</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaRecorder.java">RoombaRecorder.java</a></li>
+  <ul>
+    <li>A simple wrapper for
+multiple MacroRecorderPanels</li>
+    <ul>
+      <li>This UI allows the user
+to record and play back movements for
+a roomba.<br>
+      </li>
+    </ul>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/RoombaRecorderPanel.java">RoombaRecorderPanel.java</a></li>
+  <ul>
+    <li>GUI (tab) for
+RoombaRecorder<br>
+A Panel containing controls for testing RoombaComm.</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/SimpleTest.java">SimpleTest.java</a></li>
+  <ul>
+    <li>A simple test of
+RoombaCommSerial functionality.<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Spiral.java">Spiral.java</a></li>
+  <ul>
+    <li>Make the Roomba drive in a
+spiral. (RoombaCommSerial only)<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Spiro1.java">Spiro1.java</a></li>
+  <ul>
+    <li>A Spirograph-like example
+(RoombaCommSerial only)</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Spiro2.java">Spiro2.java</a></li>
+  <ul>
+    <li>A Spirograph-like example with additional parameters and
+behaviors
+(RoombaCommSerial only)&nbsp;<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Spy.java">Spy.java</a></li>
+  <ul>
+    <li>Connect to a roomba
+(RoombaCommSerial only) and watch sensor
+data comming back from the device.<br>
+NEED to find the differences between Spy.java, SpyAuto.java,
+and SpySimple.java</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/SpyAuto.java">SpyAuto.java</a></li>
+  <ul>
+    <li>Connect to a roomba
+(RoombaCommSerial only) and watch sensor
+data comming back from the device.<br>
+NEED to find the differences between Spy.java, SpyAuto.java,
+and SpySimple.java<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/SpySimple.java">SpySimple.java</a></li>
+  <ul>
+    <li>Connect to a roomba
+(RoombaCommSerial only) and watch sensor
+data comming back from the device.<br>
+NEED to find the differences between Spy.java, SpyAuto.java,
+and SpySimple.java</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Test.java">Test.java</a></li>
+  <ul>
+    <li>Connect to a roomba
+(RoombaCommSerial only) and run through a
+static set of operations to exercise the older RoombaComm Library.<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Tribble.java">Tribble.java</a></li>
+  <ul>
+    <li>Connect to a roomba
+(RoombaCommSerial only) and make it make
+Tribble noises<br>
+    </li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/Waggle.java">Waggle.java</a></li>
+  <ul>
+    <li>Connect to a roomba
+(RoombaCommSerial only) Drive the Roomba in
+a Waggle, like when it's searching for something</li>
+  </ul>
+  <li><a
+ href="http://svn.dprg.org/repos/roomba/roombacomm/branches/roombaNet-JMP-0.97Working/src/com/hackingroomba/roombacomm/net/">net/</a></li>
+  <ul>
+    <li>DumpMethods</li>
+    <ul>
+      <li>use Java reflection to
+output methods of the RoombaCommSerial
+class.<br>
+Looks to be heavily based on a Simple Example from
+http://java.sun.com/developer/technicalArticles/ALT/Reflection/<br>
+      </li>
+    </ul>
+    <li>RoombaCommTCPServer</li>
+    <ul>
+      <li>an early ServerSocket
+based attempt to communicate with a
+Roomba<br>
+      </li>
+    </ul>
+    <li>SimpleTest</li>
+    <ul>
+      <li>Connect to a roomba
+(RoombaCommSerial only) and run through a
+static set of operations to exercise the older RoombaComm Library.
+&nbsp;A<span style="color: rgb(255, 0, 0);">R: Paul look at
+whether
+this is really a duplicate of the file in roombacomm - if so, delete it</span></li>
+    </ul>
+    <li>TextHttpServer</li>
+    <ul>
+      <li>Appears to be a
+crude(maybe a sample from somewhere?) class
+to
+implement an Http Server. It appears to have no direct links/references
+to RoombaComm.</li>
+    </ul>
+  </ul>
+</ul>
+<h2>/src/scripts</h2>
+<ul>
+  <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);">runit.bat and runit.sh:
+Windows and Unix
+scripts that set CLASSPATH &amp; run the programs from the proper
+places</span></span></li>
+  <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);">RoombaCommTest.bat,
+RoombaCommTest.sh,
+RoombaCommGUI.bat and RoombaCommGUI.sh:&nbsp;</span></span></li>
+</ul>
+<h2>/src/processing-examples</h2>
+Directories intended to be copied into the users Processing work
+directory<br>
+<ul>
+  <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);"><a
+ href="../src/processing-examples/roombaring/roombaring.pde">roombaring/roombaring.pde</a>:
+Play a tune on Roomba (possibly the tron theme).</span></span></li>
+  <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);"><a
+ href="../src/processing-examples/roombatune/roombatune.pde">roombatune/roombatune.pde</a>:
+Allow the user to use their PC keyboard as a a musical keyboard to play
+notes in real time on the Roomba</span></span></li>
+  <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);"><a
+ href="../src/processing-examples/roombaring/roombaring.pde">roombaview/roombaview.pde</a>:
+Provide a GUI</span></span><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);"> to drive roomba which runs inside the
+Processing environment. The GUI uses direction buttons to control
+Roomba and moves it across a grid in the GUI as Roomba drives.</span></span></li>
+  <ul>
+    <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);">roombaview/data/: Directory containing
+images displayed by the GUI.</span></span></li>
+    <li><span style="color: rgb(255, 0, 0);"><span
+ style="color: rgb(0, 0, 0);">roombaview/libraries/MyGUI/library: </span></span>Directory
+contains
+MyGUI.jar, which provides button handling etc for the application.
+Check the processing documentation for where to copy the MyGUI library.</li>
+  </ul>
+</ul>
+<h2>/docs</h2>
+<ul>
+  <li>Index.html:&nbsp;Project
+overview and lead-in to documentation.
+How to use the project (for non-developers.) Contains much of the
+content from README in the original project structure</li>
+  <li>DevelopersGuide.html:
+Instructions on recommended configuration,
+packages &amp; tools that should be installed to enable
+development.
+Refers to the book where appropriate.</li>
+  <li>DirectoryStructure.html: a
+listing of directories in the project
+- both source and those built automatically, and their purpose</li>
+  <li>FileDescriptions.html: This
+file. A description of each source
+file in the project. <span style="color: rgb(255, 0, 0);">Q: is there
+a need to describe generated files?</span></li>
+  <li>ToDo.html: list of things to
+do to the project</li>
+  <li>SVN_Info.html: Subversion
+policies for the project</li>
+  <li>eclipseHowTo.html:
+Instructions for configuring eclipse for this
+project. Contents from removed README.eclipse.txt file</li>
+  <li>windowsHowTo.html:
+Instructions specific to running roombacomm
+under windows</li>
+  <li>wifiRouterHowTo.html:
+Instructions for connecting a wifi router
+and installing &amp; configuring the necessary daemons to provide
+wifi
+access to Roomba. (Content needs to come from Jonathan.)</li>
+  <br>
+</ul>
+<h2>/lib</h2>
+<ul>
+  <li>jargs.jar: library which supports posix-style command-line
+arguments (hyphen-argument style</li>
+</ul>
+<h2>/lib/rxtxlib</h2>
+<ul>
+  <li>librxtxSerial.jnilib: Java extension which lets serial I/O escape
+from the virtual machine</li>
+  <li>rxtxSerial.dll: Windows dll which provides COM access to
+librxtxSerial.jnilib</li>
+  <li>librxtxSerial.so: Mac OS-X library which provices serial driver
+access to librxtxSerial.jnilib</li>
+  <li>RXTXcomm.jar: <span style="color: rgb(255, 0, 0);">???</span></li>
+  <li>macosx_setup.command:a script to fix permissions for loc files on
+Mac OS X</li>
+  <li>README.rxtx: the name says it all</li>
+</ul>
+</body>
+</html>

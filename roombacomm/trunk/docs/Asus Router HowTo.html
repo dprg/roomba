@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Asus Router HowTo</title>
+</head>
+<body>
+<h1>ASUS Router HowTo</h1>
+<h3>Updating the package list and stty utilities</h3>
+The purpose of this step is to get updated stty utilities onto the ASUS
+router so that the baud rate of the console port can be set.<br>
+<div id=":1y" class="ii gt">
+<div>opkg update</div>
+<div>opkg install coreutils-stty</div>
+<div><br>
+</div>
+</div>
+<h3>To start ser2net</h3>
+To use console port, comment out the serial port in /etc/inittab &amp;
+reboot. File with commented out serial port should be<br>
+::ttyS0::askfirst:/bin/ash --login<br>
+<br>
+The following command sets the port to 115200<br>
+# stty -F /dev/ttyS0 115200<br>
+<br>
+Now start ser2net<br>
+# cd /roomba<br>
+# ./ser2netconf.sh<br>
+<br>
+<br>
+<br>
+<h3>Reference</h3>
+# cat sercon.sh<br>
+ser2net -c /roomba/ser2netcon.conf<br>
+<br>
+<br>
+# cat ser2netcon.conf<br>
+5001:raw:0:/dev/ttyS0:115200<br>
+<br>
+<br>
+# cat /etc/inittab<br>
+::sysinit:/etc/init.d/rcS S boot<br>
+::shutdown:/etc/init.d/rcS K stop<br>
+tts/0::askfirst:/bin/ash --login<br>
+::ttyS0::askfirst:/bin/ash --login<br>
+tty1::askfirst:/bin/ash --login<br>
+<br>
+</body>
+</html>

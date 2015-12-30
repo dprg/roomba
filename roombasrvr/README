@@ -1,0 +1,60 @@
+Below is the uvccapture readme.
+
+You need to install jpeglib.h and maybe other things it depends on (like maybe
+the whole linux include directory). 
+
+to build the configure file for roombasrvr for the Fon router:
+run ./configure --host mips-linux-uclibc --build i586-linux-pc-gnu
+
+or for Chumby:
+./configure --host arm-none-linux-gnueabi --build i586-linux-pc-gnu
+
+Make sure $PATH has /usr/arm-linux/bin
+(because gnu cross-compiler depends on finding arm-none-linux-gnuabi-gcc)
+
+To make it, just run Make or Make clean
+Then copy it down to the router or Chumby
+
+Run ser.sh before starting this program (the client relies on it - FIXME)
+Run it with something like:
+# ./roombasrvr -v -d/dev/video0 -m -t0 -x160 -y120
+
+Next, start Bsquare with the following arguments:
+-p 192.168.15.240:5002 -c getVideo -X -v 100 -d 100
+(change port as needed)
+Stretch the video window
+
+Bugs
+
+
+===================================================
+uvccapture: USB UVC Video Class Snapshot Software
+Newest versions always available at http://staticwave.ca/source/uvccapture
+
+This software is based of the package luvcview:
+Copyright (C) 2005 2006 Laurent Pinchart &&  Michel Xhaard
+
+Modifications and updates:
+Copyright (C) 2006  Gabriel A. Devenyi <ace@staticwave.ca>
+
+This program communicates via the USB UVC Video Class driver for V4L2, available
+at http://linux-uvc.berlios.de/.
+
+The purpose of this software is to capture an image from a USB webcam at a
+specified interval, and save it to a JPEG file, no other formats are supported,
+imagemagick can handle anything else you might need.
+
+Right now this software is really a hack, since still image support is not yet
+available in the UVC driver. The program continually polls the UVC driver in
+MJPEG mode, and at a specified interval writes a JPEG header and a single frame
+to file, creating a JPEG image. Because of this continuous polling, this program
+has high CPU usage. Input checking is pretty trusting, so call it with the right
+parameters.
+
+In order for this software to work, whatever device you pass to -d you will need
+to have read/write rights to, please see appropriate /dev documentation for how
+to do this.
+
+This software depends on jpeglib(present on almost all systems)
+
+For usage information, run uvccapture -h

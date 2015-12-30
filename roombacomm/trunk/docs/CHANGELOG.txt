@@ -1,0 +1,62 @@
+Changes in Roombacomm 0.96
+--------------------------
+- The primary goal of this release was to enable Roomba 500 models, 
+    which use a different baud rate. This has been done while retaining
+    backward compatibility - programs which use the roombacomm class for
+    400 and older models shouldn't have to change for the older models, and
+    may not have to change for the 500 models. Commands should run unchanged
+    on older models.
+- Secondary goals were to:
+  - get roombacomm to remember it's serial port settings, so you don't have to
+      change them each time you run a GUI
+  - Make life easier for Windows users
+  - Fix bugs along the way.
+
+The following changes were made:
+- Updated RXTX library to latest that is included in Processsing-1.01
+- Created README.windows.txt, README.eclipse.txt, CHANGELOG.txt, TODO.txt
+- Created runit.bat - Windows command prompt equivalent of runit.sh for Linux,
+    makeit.bat (makes all on windows), makedoc.bat (makes all javadoc on windows)
+- Added bluecove-2.1.0.jar to rxtxlib for windows bluetooth support
+- Made SimpleTest go backwards after it went forward using send, 
+    so it ends up where it started (and doesn't creep forward)
+- Changed playNote to use song 3, because 500-series roombas only support
+    4 or 5 songs (vs. 16 for 400-series & ealier).
+- Changed RoombaCommTest beep-hi and beep-lo duration from 10 to 32,
+    and notes more toward the middle of the range to make the beeps audible.
+    (They were too short & high/low pitched to be readily discernable.)
+- Added actions in RoombaCommPanel to make left & right forward turn buttons work
+- Added a combo box in RoombaCommPanel to let the user select the protocol
+    (SCI - Serial Command Interface, for Roomba 400 & older, and 
+    OI (Open Interface,for Roomba 500 series.) 
+- Put logic into RoombaCommSerial to store the protocol & port &
+    DSRwait settings in .roomba_config file, & retrieve them when when the
+    object is created. This lets an app "remember" the config settings that
+    were last used.
+- Updated the command-line apps to allow the protocol to be unspecified
+    (uses default from config file), or to specify the protocol
+- Made the -debug flag work in RoombaCommTest - eliminated the hard-coded
+    enable/disable statements in RoombaCommPanel
+- Made RoombaCommTest check for whether Roomba is connected (runs sensors
+    command) immediately after connecting, & print connected message.
+- Fixed disconnect button to do disconnect action
+- Fixed typo where RoombaComm.start() said it was sending control
+- Added Roomba 5xx new commands, and a sensors method that lets the caller
+    pass in the length of the expected reply. 
+    Make RoombaCommSerial.serialEvent() indicate completion when the requested
+    reply length has been received.
+- Added queryList method to support 5xx Query List command
+- Beefed up the javadoc for the executables
+- Made the Spy* programs terminate cleanly
+- Fixed bug in RoombaComm.goBackward() which made it go forward
+- Made the Test application stop when complete
+- Created build-jar.bat and build-processing-library.bat. 
+- Installed 7z.exe to support zip archive creation of build-processing-library
+- Fixed roombaview - framerate() should be frameRate()
+- Made the control() command turn LEDs on, so we know roomba is powered on
+    and we don't run the batteries flat thinking it's off. 
+    Bug: The first control command after a poweron, the LEDs flash, 
+    but don't stay on.
+- Added programs Stop (stops the robot), PowerOff (powers off the robot), 
+    and Bsquare (runs a Borenstein square test - see the UMB benchmark paper
+    by Borenstein et. al.)

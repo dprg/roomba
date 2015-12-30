@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <title>SVN_Info</title>
+
+  
+</head><body>
+<h1>Getting started (for the Subversion unaware):</h1>
+
+<p>The O'Reilly Media <a href="http://svnbook.red-bean.com/en/1.5">book</a>
+(free on line, but you can buy it too)<br />
+Good parts to read first: (<span class="sect1"><a href="http://svnbook.red-bean.com/en/1.5/svn.intro.whatis.html">What
+Is Subversion?</a></span>, <span class="chapter"><a href="http://svnbook.red-bean.com/en/1.5/svn.basic.html">Fundamental
+Concepts</a> )</span><br />
+</p>
+
+<h1>A few SVN quotes:</h1>
+
+<h3>
+<a href="http://svnbook.red-bean.com/en/1.5/svn.branchmerge.html">ref</a>:
+svnbook.red-bean.com, Chapter&nbsp;4.&nbsp;Branching and Merging
+</h3>
+
+<div class="quote">
+For projects that have a large number of contributors, it's common for
+most people to have working copies of the trunk. Whenever someone needs
+to make a long-running change that is likely to disrupt the trunk, a
+standard procedure is to create a private branch and commit changes
+there until all the work is complete.<br />
+</div>
+
+<h3><a href="http://svnbook.red-bean.com/en/1.5/svn.branchmerge.whatis.html">ref</a>:
+What is a branch?</h3>
+
+<div class="quote">This is the basic concept of a <em class="firstterm">branch</em>-namely,
+a line of development that exists independently of another line, yet
+still shares a common history if you look far enough back in time. A
+branch always begins life as a copy of something, and moves on from
+there, generating its own history (see <a class="xref" href="http://svnbook.red-bean.com/en/1.5/svn.branchmerge.whatis.html#svn.branchmerge.whatis.dia-1" title="Figure&nbsp;4.1.&nbsp;Branches of development">Figure&nbsp;4.1, Branches
+of development</a>).</div>
+
+<h3><a href="http://svnbook.red-bean.com/en/1.5/svn.branchmerge.using.html#svn.branchmerge.using.concepts">ref</a>:
+What's the point of a branch?</h3>
+
+<div class="quote">You should
+remember two important lessons from this section. First, Subversion has
+no internal concept of a branch-it knows only how to make copies. When
+you copy a directory, the resultant directory is only a "<span>branch</span>"
+because <span class="emphasis"><em>you</em></span> attach that meaning
+to it. You may think of the directory differently, or treat it
+differently, but to Subversion it's just an ordinary directory that
+happens to carry some extra historical information.<br />
+<br />
+Second, because of this copy mechanism, Subversion's branches exist as <span class="emphasis"><em>normal filesystem directories</em></span> in the
+repository. This is different from other version control systems, where
+branches are typically defined by adding extra-dimensional "<span class="quote">labels</span>" to collections of files. The location
+of your branch directory doesn't matter to Subversion. Most teams
+follow a convention of putting all branches into a <code class="filename">/branches</code> directory, but you're free to invent
+any policy you wish.<br />
+</div>
+
+<h2>A few words about this project's tree managment approach:</h2>
+
+The structure will be as follows:<br />
+
+/roombacomm<br />
+
+&nbsp; ../trunk<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp; This is where the bleading edge development
+and believed to be fully working code for this project can be found.
+The structure should be
+usable as an SVN checkout&nbsp; for the project source tree. In general
+the idea is that /trunk will be usable at all times. More deatils about
+the structure of the project in a seperate <a href="DirectoryStructure.html">document</a>.<br />
+
+<br />
+
+&nbsp; ../branches<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp; These branches are planed to be of one of two
+types: experemental or releases.<br />
+
+&nbsp;&nbsp;&nbsp; Experemental branches:<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp; This is where long running development efforts
+will take place for the project. Each branch should follow the projects
+naming
+convention based on the type of branch. (See "SVN policies of this
+project" for details) In general, these branches should be considered
+"under development" or "experimental" and under the control of a
+developer. When the branch reaches a stability point, where the code
+implmentes the changes that are desired for the branch, has implemented
+any now needed testing code, and the code still passes all tests for
+the project then the branch is
+ready to be merged back into the trunk.<br />
+
+&nbsp;&nbsp;&nbsp; Release branches are points of code development
+where it has been tested, prepaired, and packaged as a step forward for
+the project.<br />
+
+<br />
+
+<h2>SVN policies of this project:</h2>
+
+<ol>
+
+  <li>all svn commits should have comments/log entries. (prefereably
+identifying each file that was altered and in laymen terms what was
+changed in that file)</li>
+  <li>the keyword Id should be included in a comment in every file (do
+not forget to set the svn:keywords property on the file too.)</li>
+  <li>/branches/release-N.N.N will be official releases of the project</li>
+  <li>experemental branches are encouraged when <strong><em>any or all</em></strong><span style="font-weight: bold;"> </span>of the following
+is true:
+    <table style="text-align: left; width: 618px; margin-left: 34px;" border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; width: 516px;">the
+development effort will
+take more than one commit to achieve</td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; width: 516px;">the change is
+likely to
+break any backwards compatibility in
+the current/previous release</td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; width: 516px;">automated
+testing failed,
+or the changes are not yet covered by
+automated testing</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>code in compiled form should not be in SVN unless it is <strong><em>at
+least one</em></strong> of the following:
+    <table style="text-align: left; width: 618px; margin-left: 34px;" border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; width: 529px;">an outside
+library that is
+included for simplicity/compatibility (best done with a <span class="sect1"><a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.vendorbr.html">Vendor
+Branch</a>)</span></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; width: 529px;">it is in a
+packaged release for the
+project</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>All new features developed must include automated testing code to
+validate the function.The tests should be constructed in accordance with the format and approach that
+the project is using for automated testing.<br />
+  </li>
+</ol>
+
+<h2>More general SVN references:</h2>
+
+<ul>
+
+  <li><a href="http://svnbook.red-bean.com/">Version Control with
+Subversion</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">wikipedia</a><a href="http://aymanh.com/subversion-a-quick-tutorial"><span style="font-weight: bold;" /></a></li>
+  <li><a href="http://aymanh.com/subversion-a-quick-tutorial"><span style="font-weight: bold;">Subversion - A Quick Tutorial</span></a></li>
+</ul>
+
+<p><br />
+</p>
+
+</body></html>

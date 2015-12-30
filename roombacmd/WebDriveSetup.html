@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>How to set up webdrive web page</title>
+</head>
+<body>
+<h1>HowTo set up the web drive web page</h1>
+<ol>
+  <li>Connect Roomba to the your router or other linux box which is
+going to drive Roomba. Figure out the serial port name.</li>
+  <li>Copy webcrive.html and webdrive.css to /www</li>
+  <li>Copy webdrive.cgi to /www/cgi-bin. Make it executable
+with&nbsp;chmod +x /www/cgi-bin/webdrive.cgi</li>
+  <li>Copy roombacmd.mpl to your roomba working directory - e.g. /roomba</li>
+  <li>Edit /www/cgi-bin/webdrive.cgi and set the variables to point to
+your port name, baud rate, directory where roombacmd.mpl.</li>
+</ol>
+Send your browser to http://webdrive.html<br>
+</body>
+</html>

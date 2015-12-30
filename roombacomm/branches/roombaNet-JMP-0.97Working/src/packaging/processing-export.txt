@@ -1,0 +1,5 @@
+application.macosx = roombacomm.jar, RXTXcomm.jar, librxtxSerial.jnilib
+application.linux = roombacomm.jar, RXTXcomm.jar, librxtxSerial.so
+application.windows = roombacomm.jar, RXTXcomm.jar, rxtxSerial.dll
+
+

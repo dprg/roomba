@@ -1,0 +1,8 @@
+config BR2_PACKAGE_ROOMBACMD
+	prompt "roombacmd......................... Command-line tool to control a Roomba
+	tristate
+	default m if CONFIG_DEVEL
+	help
+	      Command-line tool to control a Roomba
+
+	      http://roombahacking.com/

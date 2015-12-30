@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>To Do</title>
+  <style>
+  /* added the "done" class to mark what was completed */ 
+  .done {
+  color: green;
+  }
+  /* added the "help" class to mark what need more information */
+  .help{
+  color: red;
+  }
+  </style>
+</head>
+<body>
+<h1>TO
+Do for 0.97 Release</h1>
+<h2>MUST (we will hold shipment
+for these)</h2>
+<ul>
+  <li>GUI
+needs to have symbol/icon for LED buttons
+    <ul>
+      <li class="help">Spot will become ____</li>
+      <li class="help">Clean will become ____</li>
+      <li class="help">Dirt will become ____</li>
+      <li class="help">Max will become ____</li>
+      <li class="help">Doc (D rotated) will become ____</li>
+      <li class="help">CheckRobot (C rotated) will become ____</li>
+      <li class="done">top line(None-green-red-orange) Only visible for
+400(SCI)</li>
+      <li class="done">Bottom line (Dock and Checkrobot) Only visible
+for 500 (OI)</li>
+    </ul>
+  </li>
+  <li>Check in web GUI into TOT &amp; make it work/build</li>
+  <li>Update web app interface to include network IP connection &amp;
+make web GUI match functionality of roombacomm GUI</li>
+  <li>Rename bsquare to something better </li>
+  <li>Put ser2net into the tree (subject to licensing)<br>
+    <font class="help">What is the licensing question here?</font></li>
+  <li>make ant build the tree, make a build &amp; a doc target &amp; an
+install target (does what the build script used to do)</li>
+  <li>make the dummy's buildit/makeit shell scripts &amp; put them in
+the right directory both for source control &amp; for distribution</li>
+  <li>restructure TOT to a new directory structure that&rsquo;s
+documented &amp; standard </li>
+  <li>Merge changes from JMP097Working to TOT</li>
+</ul>
+<h3>Docs</h3>
+<ul>
+  <li>Create readme for svn &amp; eclipse </li>
+  <li>fix copyrights <br>
+    <font class="help">What should the copyrights be? Can someone put
+the standard info into this doc?</font></li>
+  <li>make docs into hyperlinked html files </li>
+  <li>document how to set up apache to make the web server work </li>
+  <li>document how to make ser2net work as a network server on a router
+(how to build/run) </li>
+  <li>document the new directory structure</li>
+</ul>
+<h2>HI-WANT (we plan to put these in, but priorities may intercede) </h2>
+<ul>
+  <li>Make BumpTurn &amp; others commandline programs work over the
+network</li>
+  <li>Make front bumper press stop the roomba's motors when driving in
+controlled mode. </li>
+  <li>make javadocs &amp; link into doc system </li>
+  <li>Get permission to bundle MyGUI with this package, or document
+where it can be found. Bundle it into the zip file</li>
+</ul>
+<h2>WANT (these are desirable and will be worked on opportunistically)</h2>
+<ul>
+  <li>First time after poweron, the LEDs flash but don't stay on. Fix
+it. (sometime, not necessarily for 0.97)</li>
+  <li>Add Motor exerciser panel to RoombacommGui</li>
+  <li>Make it so the model of roomba can be discovered (400 vs. 500
+family, &amp; maybe sub-models within the family)</li>
+  <li>move connection settings in roombacommGUI to its own dialog</li>
+  <li>Fill out the the sensor numbers/groups for 5xx models, &amp;
+develop masks &amp; figure out the corresponding reply length for the
+extra groups, and for querylist (sometime, not necessarily for
+0.97)</li>
+  <li>Implement failsafe in ser2net or shell script on router</li>
+  <li>Make roombasrvr able to serve the serial connection</li>
+  <li>Evaluate additional API capabilities that Roombacomm should maybe
+support, such as other sensor reading modes (querylist, stream),
+scheduling capability or others </li>
+  <li>Request permission from iRobot to publish the OI spec in the
+release&nbsp;</li>
+  <li>Fix net folder under roombacomm root - it won't build</li>
+  <li>&nbsp;Fill out the the sensor numbers/groups for 5xx models,
+&amp; develop masks &amp; figure out the corresponding reply length for
+the extra groups, and for querylist</li>
+  <li>First time after poweron, the LEDs flash but don't stay on. Fix
+it.</li>
+</ul>
+<h3>VERIFY (these are thought to be complete but need checking)</h3>
+<ul>
+  <li>Change the GUI to deal with with smaller screens<br>
+We have some users
+running it on netbooks. Looking at the specs, seems they may have a
+display as low as 1024x600 resolution. This does not leave room for the
+task bar. So I think a version that is 480 height would make sense,
+allowing for title-bar height etc, but width can be wider than 640 if
+you want. </li>
+  <li>Maybe move to some command line options for GUI layout
+    <ul>
+      <li>--GUI=1024x768 or --GUI=640x480</li>
+      <li>--GUI=NNNxYYY (support of variable values?)</li>
+    </ul>
+  </li>
+  <li>Update Power LEDS for 500 series, also make the sliders work the
+power leds in realtime. Paul thinks it works - what's broken?</li>
+  <li>Update roombacmd - change baud rate to SCI/OI </li>
+  <li>fix bug in simpletest on router if no parameters are given.</li>
+  <li>Verify that roombacomm doesn't exit if there are no serial ports </li>
+</ul>
+</body>
+</html>

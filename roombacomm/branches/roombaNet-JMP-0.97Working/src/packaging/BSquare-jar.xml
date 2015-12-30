@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project roombaNet-JMP-0.97Working">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+	<property name="projectDir" value="../.."/>
+    <target name="create_run_jar">
+        <jar destfile="${projectDir}/dist/BSquare.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="com.hackingroomba.roombacomm.Bsquare"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${projectDir}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="${projectDir}/lib/bluecove/bluecove-2.1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${projectDir}/lib/rxtx/RXTXcomm.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${projectDir}/lib/looks-2.1.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${projectDir}/lib/jargs.jar"/>
+        </jar>
+    </target>
+</project>

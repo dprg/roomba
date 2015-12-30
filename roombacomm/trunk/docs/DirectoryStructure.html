@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>DirectoryStructure</title>
+</head>
+<body>
+<h1>Directory Structure</h1>
+This page defines the directory structure standard used in this
+project. It is based on the recommendations in the developer.com <a
+ href="http://www.developer.com/java/other/article.php/994991/Building-with-Ant-Directory-Structure.htm">article
+here</a>.&nbsp;
+<br>
+<h2>The Directories</h2>
+The directories described below are relative to the project source
+tree, as would be checked out of SVN at
+http://svn.dprg.org/repos/roomba/roombacomm/trunk<br>
+<br>
+Two trees are supplied by the project: <br>
+<ol>
+  <li>the full developer tree, described below</li>
+  <li>the user tree, which is the contents of the dist directory after
+building the full developer tree</li>
+</ol>
+The intent is that the dist directory contains everything a user needs
+to run the applications, but not the source. It is considered good
+practice to separate the runnable application from the source, which
+contains much more that users aren't typically interested in. <a
+ name="dir">
+</a>
+<table border="1">
+  <tbody>
+    <tr>
+      <th colspan="2">Directory Structure of /: </th>
+    </tr>
+    <tr>
+      <td>/ </td>
+      <td>project root directory
+(run all tools from here) </td>
+    </tr>
+    <tr>
+      <td>&nbsp;build.xml </td>
+      <td>Ant build file </td>
+    </tr>
+    <tr>
+      <td>&nbsp;lib/ </td>
+      <td>jar files required for
+build </td>
+    </tr>
+    <tr>
+      <td>&nbsp;src/ </td>
+      <td>Java source code for
+servlets and utilities </td>
+    </tr>
+    <tr>
+      <td>&nbsp;doc/</td>
+      <td>Project documentation,
+READMEs, HowTo's, etc</td>
+    </tr>
+    <tr>
+      <td>&nbsp;build/ </td>
+      <td>files compiled/copied
+into here (this directory can be
+safely deleted, and is not stored in the repository) </td>
+    </tr>
+    <tr>
+      <td>dist/</td>
+      <td>"ready to use" JAR's and other applications for
+users.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="width: 688px; height: 238px;" border="1">
+  <tbody>
+    <tr>
+      <th colspan="2">Directory Structure of /src: </th>
+    </tr>
+    <tr>
+      <td>com/hackingroomba/roombacomm </td>
+      <td>Source directory of roombacomm library + applications</td>
+    </tr>
+    <tr>
+      <td>&nbsp;scripts </td>
+      <td>scripts to run the applications, and obsolete scripts that
+used to build the applications </td>
+    </tr>
+    <tr>
+      <td>&nbsp;processing-examples </td>
+      <td>contains directories for the /roombaring, /roombatune &amp;
+/roombaview processing
+apps. These apps are intended to be copied as-is into a processing
+directory. (Processing is a graphic development environment - read
+"Hacking Roomba" for more details.)</td>
+    </tr>
+    <tr>
+      <td>processing-examples/roombaview</td>
+      <td>In addition to the processing application, contains
+subdirectories which support the application. See fileDescriptions.</td>
+    </tr>
+    <tr>
+      <td>packaging</td>
+      <td>???A directory containing RoombaCommTest.app and directories
+which help a Mac build an app???</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="width: 688px; height: 115px;" border="1">
+  <tbody>
+    <tr>
+      <th style="height: 34px;" colspan="2">Directory Structure of
+/lib: </th>
+    </tr>
+    <tr>
+      <td style="height: 34px;">/</td>
+      <td style="height: 34px;">jar files which support roombacomm apps</td>
+    </tr>
+    <tr>
+      <td style="height: 35px;">/rxtx </td>
+      <td style="height: 35px;">Files which provide serial I/O for java</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="width: 688px; height: 115px;" border="1">
+  <tbody>
+    <tr>
+      <th style="height: 34px;" colspan="2">Directory Structure of
+/dist: </th>
+    </tr>
+    <tr>
+      <td style="height: 34px;"></td>
+      <td style="height: 34px;"></td>
+    </tr>
+    <tr>
+      <td style="height: 35px;"></td>
+      <td style="height: 35px;"></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body>
+</html>

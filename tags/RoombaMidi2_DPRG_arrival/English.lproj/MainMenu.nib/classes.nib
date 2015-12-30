@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {
+                backward = id; 
+                beep = id; 
+                displayHelp = id; 
+                forward = id; 
+                ledsOff = id; 
+                ledsOn = id; 
+                reset = id; 
+                spinleft = id; 
+                spinright = id; 
+                stop = id; 
+                vacuumOff = id; 
+                vacuumOn = id; 
+            }; 
+            CLASS = RoombaMidi2; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                currentChannel = NSTextField; 
+                currentPort = NSTextField; 
+                status = NSTextView; 
+                tableView = NSTableView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = TestTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }
+    ); 
+    IBVersion = 1; 
+}

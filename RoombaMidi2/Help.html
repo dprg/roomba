@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>RoombaMidi2 Help</title>
+<style>
+body {
+font: 13px Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+</style>
+<script>
+self.resizeTo(600,800);
+</script>
+</head>
+<body>
+
+<h1> RoombaMidi2 Help </h1>
+ 
+Make the Roomba a musical instrument!
+<br><br>
+RoombaMidi2 appears as a MIDI destination called 'RoombaMidi2 In' <br>
+to MIDI apps like Ableton Live, Apple Logic or any other sequencer.<br>
+<br>
+The right-hand side lets you select which Roomba to connect to a MIDI channel.<br>
+Pick the serial port that corresponds to your Roomba and click the connect button.<br>
+If successful, the Roomba will emit a small beep.<br>
+<br>
+The left-hand side lets you control the currently selected Roomba. <br>
+A Roomba is assigned to a single MIDI channel.  <br>
+<br>
+Connect up a Roomba, use test buttons, send it MIDI!<br>
+<br>  
+
+<h3> MIDI Implementation </h3>
+<ul>
+<li> note numbers 32-127 (G0 and up): 
+  <ul>  
+  <li> notenum is note, played thru beeper  
+  <li> velocity is duration in number of 1/32s of a second (e.g. 32==1second)  
+  </ul>  
+<li> note number 24 (C0): 
+  <ul>  
+  <li> main vacuum, on = non-zero velocity, off = zero velocity (note off)
+  </ul>
+<li> note number 25 (C#0): 
+  <ul>  
+  <li> blink LEDs, velocity is color of Power LED  
+  </ul>  
+<li> note number 28 and 29 (E0 &amp; F0):
+  <ul>  
+  <li> spin left or right, velocity is speed of spin, note off is stop
+  </ul>  
+<li> note number 27 and 30 (Eb0 &amp; F#0):
+  <ul>  
+  <li> move forward or backward, velocity is speed, note off is stop
+  </ul>  
+</ul>  
+
+<br>  
+Updates to this and other Roomba hacks are available at 
+<a href="http://hackingroomba.com/">HackingRoomba.com</a>.
+<br>
+<br>
+<br>
+<i>Copyright (c) 2006 Tod E. Kurt, ThingM.</i>
+
+
+</body>
+</html>

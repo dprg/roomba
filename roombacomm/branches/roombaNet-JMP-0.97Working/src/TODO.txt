@@ -1,0 +1,6 @@
+To Do List
+- Fix net folder under roombacomm root - it won't build
+- Fill out the the sensor numbers/groups for 5xx models, & develop masks & figure out the corresponding reply length for the extra
+groups, and for querylist
+- First time after poweron, the LEDs flash but don't stay on. Fix it.
+

@@ -1,0 +1,73 @@
+RoombaComm: Roomba Control & Communications API, release 0.96
+Copyright (c) 2006-9   Tod E. Kurt, tod-at-todbot.com &
+                       Paul Bouchier,  bouchier-at-classicnet.net
+
+Quick Start for Java on Linux
+-----------------------------
+If you have a Roomba Serial Interface built and the 'roombacomm-java.zip'
+library, you can quickly try both out by unzipping this file and running 
+one of the examples:
+
+% unzip roombacomm.zip
+% cd roombacomm
+% ./run-it.sh roombacomm.SimpleTest /dev/cu.KeySerial1
+
+Assuming you have a serial device called "/dev/cu.KeySerial1", which you 
+probably do if you have a Keyspan USA-19HS USB serial adapter.
+
+
+Quick Start for Processing
+--------------------------
+If you have a Roomba Serial Interface built and the 'roombacomm-processing.zip'
+library, you can quickly try out both by unzipping this file and running
+one of the examples:
+
+1. Unzip the 'roombacomm-processing.zip' file inside of Processing's
+    'libraries' directory.  This will create a directory called 'roombacomm'.
+2. Start Processing (or Restart if already running)
+3. Create a New Sketch
+3. Choose "Sketch->Import Library->roombacomm" menu item
+4. Copy one of the Processing examples in the 'examples' directory of the
+    roombacomm library (zipfile). Note that if you want to run roombaview
+    you must install the MyGUI package.  
+    The MyGUI library is located in the 'libraries' directory of the 'roombaview'
+    sketch.  You may need to run an older version of Processing for it to work.
+
+
+
+Compatibility
+-------------
+This library has only been tested on Mac OS X 10.4, and a little on 
+Windows 2000, but everything is in place (particularly the RXTX native
+libraries) for it to work on any version of Mac OS X, Windows, and Linux.
+
+
+
+Platform-specific Notes
+-----------------------
+Mac OS X:
+---------
+If you've never used RXTX before on your Mac OS X box, run the command:
+
+% ./rxtxlib/macosx_setup.command
+
+And then shutdown (not just log out) and log back in again.
+And read this faq from Processing: http://processing.org/faq/bugs.html#serial
+
+Also, if you use Bluetooth in 10.3, you can only input numeric passkeys,
+which can make using Bluetooth adapters difficult.  If your Bluetooth
+adapter can change its passkey (possible with the SparkFun/BlueRadios
+devices), change it to a numeric passkey on a differernt computer. 
+Or upgrade your OS. :)
+
+Windows:
+--------
+
+The serial port implementation is a little different (at least to RXTX)
+so use the '-hwhandshake' flag with the programs, if using Bluetooth on 
+Windows.  See, 'RoomabCommSerial.waitForDSR' for details.
+
+(And yes, I know the build, configuration, and release of this library 
+is a little goofball, but I wanted to get something out so others can play)
+
+-eof-

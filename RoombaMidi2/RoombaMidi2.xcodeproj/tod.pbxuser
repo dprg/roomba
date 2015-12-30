@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {546, 591}}";
+			sepNavSelRange = "{102, 0}";
+			sepNavVisRect = "{{0, 0}, {546, 591}}";
+			sepNavWindowFrame = "{{168, 161}, {591, 711}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = DE8DFB9A0B253825001E5138 /* RoombaMidi2 */;
+		activeTarget = 8D1107260486CEB800E47090 /* RoombaMidi2 */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* RoombaMidi2 */,
+		);
+		codeSenseManager = DE8DFBA70B25382B001E5138 /* Code sense */;
+		executables = (
+			DE8DFB9A0B253825001E5138 /* RoombaMidi2 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					77,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					75,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					201,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					120,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					21,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 188208550;
+			PBXWorkspaceStateSaveDate = 188208550;
+		};
+		perUserProjectItems = {
+			DE3B99A50B37D5B1008170E2 /* PBXBookmark */ = DE3B99A50B37D5B1008170E2 /* PBXBookmark */;
+			DE3B99AD0B37D5C2008170E2 /* PBXTextBookmark */ = DE3B99AD0B37D5C2008170E2 /* PBXTextBookmark */;
+			DE3B99BB0B3A7E82008170E2 /* PBXTextBookmark */ = DE3B99BB0B3A7E82008170E2 /* PBXTextBookmark */;
+			DE3B99BC0B3A7E82008170E2 /* PBXTextBookmark */ = DE3B99BC0B3A7E82008170E2 /* PBXTextBookmark */;
+			DE3B99BD0B3A7E82008170E2 /* PBXTextBookmark */ = DE3B99BD0B3A7E82008170E2 /* PBXTextBookmark */;
+			DE3B99BE0B3A7E82008170E2 /* PBXTextBookmark */ = DE3B99BE0B3A7E82008170E2 /* PBXTextBookmark */;
+			DE3B99BF0B3A7E82008170E2 /* PBXTextBookmark */ = DE3B99BF0B3A7E82008170E2 /* PBXTextBookmark */;
+			DE3B99C10B3A7E90008170E2 /* PBXTextBookmark */ = DE3B99C10B3A7E90008170E2 /* PBXTextBookmark */;
+			DE3B99C30B3A7EB9008170E2 /* PBXTextBookmark */ = DE3B99C30B3A7EB9008170E2 /* PBXTextBookmark */;
+			DE3B99C50B3A7EC7008170E2 /* PBXTextBookmark */ = DE3B99C50B3A7EC7008170E2 /* PBXTextBookmark */;
+		};
+		sourceControlManager = DE8DFBA60B25382B001E5138 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {453, 186}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {453, 186}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* RoombaMidi2 */ = {
+		activeExec = 0;
+		executables = (
+			DE8DFB9A0B253825001E5138 /* RoombaMidi2 */,
+		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {686, 591}}";
+			sepNavSelRange = "{371, 0}";
+			sepNavVisRect = "{{0, 0}, {546, 591}}";
+			sepNavWindowFrame = "{{168, 161}, {591, 711}}";
+		};
+	};
+	DE151DA20B2559C7009C353D /* RoombaMidi2.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 732}}";
+			sepNavSelRange = "{2, 0}";
+			sepNavVisRect = "{{0, 0}, {546, 591}}";
+		};
+	};
+	DE151DA30B2559C7009C353D /* RoombaMidi2.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {698, 4464}}";
+			sepNavSelRange = "{9568, 0}";
+			sepNavVisRect = "{{0, 3407}, {546, 591}}";
+			sepNavWindowFrame = "{{168, 161}, {591, 711}}";
+		};
+	};
+	DE151DD00B255E41009C353D /* MidiHandler.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {578, 591}}";
+			sepNavSelRange = "{0, 257}";
+			sepNavVisRect = "{{0, 0}, {546, 591}}";
+			sepNavWindowFrame = "{{361, 139}, {591, 711}}";
+		};
+	};
+	DE151DD10B255E41009C353D /* MidiHandler.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {546, 1200}}";
+			sepNavSelRange = "{1186, 0}";
+			sepNavVisRect = "{{0, 299}, {546, 591}}";
+			sepNavWindowFrame = "{{126, 131}, {591, 711}}";
+		};
+	};
+	DE16D6CC0B365639002B06CB /* roombamidi2_icon.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{168, 161}, {591, 711}}";
+		};
+	};
+	DE16D6DF0B36580F002B06CB /* roombamidi2_icon.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{38, 138}, {726, 714}}";
+		};
+	};
+	DE16D7A70B36A185002B06CB /* Help.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {546, 816}}";
+			sepNavSelRange = "{69, 0}";
+			sepNavVisRect = "{{0, 0}, {546, 591}}";
+			sepNavWindowFrame = "{{168, 161}, {591, 711}}";
+		};
+	};
+	DE3B99A50B37D5B1008170E2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+	};
+	DE3B99AD0B37D5C2008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "RoombaMidi2.m: 78";
+		rLen = 0;
+		rLoc = 2343;
+		rType = 0;
+		vrLen = 1707;
+		vrLoc = 1155;
+	};
+	DE3B99BB0B3A7E82008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DD10B255E41009C353D /* MidiHandler.m */;
+		name = "MidiHandler.m: 52";
+		rLen = 0;
+		rLoc = 1186;
+		rType = 0;
+		vrLen = 1439;
+		vrLoc = 676;
+	};
+	DE3B99BC0B3A7E82008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "RoombaMidi2.m: 192";
+		rLen = 0;
+		rLoc = 5353;
+		rType = 0;
+		vrLen = 1328;
+		vrLoc = 2080;
+	};
+	DE3B99BD0B3A7E82008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "// set to first row";
+		rLen = 24;
+		rLoc = 2080;
+		rType = 0;
+		vrLen = 1701;
+		vrLoc = 1155;
+	};
+	DE3B99BE0B3A7E82008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DD10B255E41009C353D /* MidiHandler.m */;
+		name = "MidiHandler.m: 52";
+		rLen = 0;
+		rLoc = 1186;
+		rType = 0;
+		vrLen = 1439;
+		vrLoc = 676;
+	};
+	DE3B99BF0B3A7E82008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "RoombaMidi2.m: 319";
+		rLen = 0;
+		rLoc = 9923;
+		rType = 0;
+		vrLen = 2191;
+		vrLoc = 8432;
+	};
+	DE3B99C10B3A7E90008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "RoombaMidi2.m: 313";
+		rLen = 0;
+		rLoc = 9568;
+		rType = 0;
+		vrLen = 2191;
+		vrLoc = 8432;
+	};
+	DE3B99C30B3A7EB9008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "RoombaMidi2.m: 313";
+		rLen = 0;
+		rLoc = 9568;
+		rType = 0;
+		vrLen = 2191;
+		vrLoc = 8432;
+	};
+	DE3B99C50B3A7EC7008170E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE151DA30B2559C7009C353D /* RoombaMidi2.m */;
+		name = "RoombaMidi2.m: 313";
+		rLen = 0;
+		rLoc = 9568;
+		rType = 0;
+		vrLen = 2191;
+		vrLoc = 8432;
+	};
+	DE8DFB9A0B253825001E5138 /* RoombaMidi2 */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = RoombaMidi2;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	DE8DFBA60B25382B001E5138 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	DE8DFBA70B25382B001E5138 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DE90B2170B3136FC00D7EAE7 /* roombalib.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {578, 3456}}";
+			sepNavSelRange = "{8316, 0}";
+			sepNavVisRect = "{{0, 0}, {546, 591}}";
+			sepNavWindowFrame = "{{15, 159}, {726, 714}}";
+		};
+	};
+	DE90B2180B3136FC00D7EAE7 /* roombalib.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {681, 1296}}";
+			sepNavSelRange = "{3347, 0}";
+			sepNavVisRect = "{{0, 702}, {681, 594}}";
+		};
+	};
+	DE90B63F0B33708C00D7EAE7 /* but_forward_30.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{38, 138}, {726, 714}}";
+		};
+	};
+	DE90B6400B33708C00D7EAE7 /* but_spinleft_30.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{61, 117}, {726, 714}}";
+		};
+	};
+}
